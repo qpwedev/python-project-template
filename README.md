@@ -1,74 +1,43 @@
-# Telegram Message Merger
+# Python Project Template
 
-Telegram Message Merger is a script that combines your last messages sent in a private chat within a 30-second interval into a single message, deletes the old messages, and edits the first message to include the content of the others.
+This Python project template provides a basic structure for starting a Python project.
+
+## Project Structure
+
+- `config.json`: A JSON file to store project configuration data, such as the hello_message used in the `main.py` script.
+- `README.md`: This file, which provides an overview of the project and instructions for getting started.
+- `.env`: A file that stores environment variables, such as the `USERNAME` variable used in the`main.py` script.
+- `requirements.txt`: A file that lists the project dependencies. Users should install these dependencies before running the project.
+- `.gitignore`: A file that specifies files and directories to be ignored by Git. This template includes standard ignore patterns for macOS and Python.
+- `src`: A folder containing the main Python script.
+- `main.py`: The main script that reads the `config.json` file and prints a `hello_message`. It also reads the `USERNAME` environment variable from the `.env` file.
+
+## main.py
+
+The `main.py` script consists of the following functions:
+
+- `read_json_file(file_path)`: A function that reads a JSON file and returns the data as a Python object.
+- `read_env_var(var_name)`: A function that reads an environment variable and returns its value. If the variable is not set, it returns the default value "Nikolai Durov".
+- `print_hello_world()`: A function that reads the `hello_message` from the `config.json` file, reads the `USERNAME` environment variable, and prints both values.
+
+When the script is run, the `print_hello_world()` function is called, and the `hello_message` from the `config.json` file and the `USERNAME` from the `.env` file are printed.
 
 ## Getting Started
 
-To run this script on your local machine, follow these steps:
-
-## Prerequisites
-
-- Python 3.7 or higher
-- Telegram account
-
-## Installation
-
-1. Clone the repository:
+- Clone or download this repository to your local machine.
+- Navigate to the project directory and locate the `config.json` file. You can customize the `hello_message` value as needed.
+- Create a `.env` file in the project directory and set the `USERNAME` environment variable to your desired value.
+- Install the project dependencies by running the following command:
 
 ```bash
-git clone https://github.com/yourusername/telegram-message-merger.git
-```
-
-1. Change the working directory:
-
-```bash
-cd telegram-message-merger
-```
-
-1. Install the required packages:
-
-```
 pip install -r requirements.txt
 ```
 
-1. Create a new .env file in the project directory and add your API_ID, API_HASH, and MY_ID from your Telegram account:
-   makefile
-
-```
-API_ID="<YOUR_VALUE>"
-API_HASH="<YOUR_VALUE>"
-MY_ID="<YOUR_VALUE>"
-```
-
-1. Replace <YOUR_VALUE> with your actual API ID, API HASH, and MY_ID values.
-
-## Obtaining API_ID and API_HASH
-
-To get the `API_ID` and `API_HASH` for your Telegram application, follow these steps:
-
-1. Go to the [Telegram API Portal](https://my.telegram.org/).
-1. Login with your phone number.
-1. Click on the API development tools link.
-1. Click on the Create New Application button.
-1. Fill in the required fields and click on the Create button.
-1. Your `API_ID` and `API_HASH` will be displayed on the next page.
-
-Make sure to add these values to your `.env` file as mentioned in the Installation section.
-
-## Usage
-
-Run the script:
+- Open a terminal or command prompt and navigate to the src folder.
+- Run the main.py script using the following command:
 
 ```bash
-python3 src/main.py
+python src/main.py
 ```
 
-Start a private chat with yourself on Telegram and send messages. The script will automatically merge the messages sent within a 30-second interval.
-
-## Contributing
-
-Contributions are welcome! If you have any suggestions, feature requests, or bug reports, feel free to open an issue or submit a pull request.
-
-## Contact
-
-If you have any questions or need help, feel free to contact me on Telegram: [@qpwedev](https://t.me/qpwedev).
+This will print the `hello_message` from the `config.json` file and the `USERNAME` from the `.env` file.
